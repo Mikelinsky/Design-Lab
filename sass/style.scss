@@ -4,6 +4,11 @@
     font-family: "Lato";
 }
 
+.section-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px;
+}
 .container {
     width: 100%;
     max-width: 1200px;
@@ -188,9 +193,20 @@ section {
         height: 237px;
         background-size: cover;
         background-position: center;
+        position: relative;
     }
     .row {
-        margin-top: 10px;
+        margin-top: 1%;
+        h4 {
+            color: #ffffff;
+            font-size: 34px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 8.95px;
+            position: absolute;
+            bottom: 10%;
+            left: 8%;
+        }
         .img-1 {
             background-image: url("../images/layer-5-copy.png");
         }
@@ -211,6 +227,23 @@ section {
             background-image: url("../images/layer-5-copy-321.png");
         }
     }
+}
+//grid for 'our works' & clearfix
+.row:before,
+.row:after {
+	content:"";
+	display: table ;
+	clear: both;
+}
+ [class*="col-"] {
+	float: left;
+	min-height: 1px;
+    padding: 12px;
+}
+.col-small {width: 30%;}
+.col-big {
+    width: 38%;
+    margin: auto 1%;
 }
 //contact us
 .contact-us {
