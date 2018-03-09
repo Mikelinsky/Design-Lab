@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+* {
+    box-sizing: border-box;
+    font-family: "Lato";
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+//header
+header {
+    background-image: url("../images/layer-8.jpg");
+    width: 100%;
+    min-height: 100vh; 
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    padding-top: calc(50vh - 127px);
+    .logo-img {
+        width: 65px;
+        height: 69px;
+        position: absolute;
+        top: 20vh;
+        right: calc(50% - 32px);
+    }
+    .scroll-img {
+        width: 23px;
+        height: 37px;
+        position: absolute;
+        bottom: 60px;
+        right: calc(50% - 11px);
+    }
+    h1 {
+        margin-bottom: 40px;
+        font-size: 54px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 8.62px;
+    }
+    p {
+        font-weight: 400;
+        line-height: 29px;
+        text-transform: uppercase;
+        letter-spacing: 0.9px;
+    }
+}
+
+@mixin borders($color) {
+    border-right: 2px solid;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    position: relative;
+    border-color: $color;
+}
+@mixin topBorder($color) {
+    content: " ";
+    width: 23%;
+    position: absolute;
+    top: 0;
+    border-top: 2px solid $color;
+}
+
+
+//about us
+.about-us {
+    max-width: 902px;
+    @include borders(#3c3c3c);
+    text-align: center;
+    color: #3c3c3c;
+    margin-top: 160px;
+    margin-bottom: 160px;
+    padding-bottom: 40px;
+
+    h1 {
+        letter-spacing: 8.95px;
+        font-size: 34px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin: 0 auto 45px auto;
+        transform: translateY(-20px);
+    }
+    p {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+    }
+}
+//about top border
+.about-us::after, .about-us::before {
+    @include topBorder(#3c3c3c);
+}
+.about-us::after {
+    left: 0;
+}
+.about-us::before {
+    right: 0;
+}
+//services
+.services {
+    max-width: 1920px;
+    background-image: url("../images/layer-4.png");
+    padding: 110px 0 96px 0;
+    background-size: cover;
+    background-position: center;
+    //service top border
+    .services-container::after, .services-container::before {
+        @include topBorder(#ffffff);
+    }
+    .services-container::after {
+        left: 0;
+    }
+    .services-container::before {
+        right: 0;
+    }
+    .services-container {
+        text-align: center;
+        color: #ffffff;
+        max-width: 899px;
+        @include borders(#ffffff);
+        h1 {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 25.89px;
+            letter-spacing: 8.95px;
+            font-size: 34px;
+            text-transform: uppercase;
+            transform: translateY(-12px);
+            margin-bottom: 3rem;
+        }
+        p {
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+//what we do
+section {  
+    margin-top: 119px;
+    margin-bottom: 114px;  
+    .what-we-do {
+        @include borders(#3c3c3c);
+        max-width: 902px;
+        text-align: center;
+        color: #3c3c3c;
+        h1 {
+            text-transform: uppercase;
+            font-size: 34px;
+            font-weight: 700;
+            letter-spacing: 8.95px;
+            transform: translateY(-20px);
+            margin-bottom: 112px;
+        }
+        h4 {
+            font-size: 20px;
+            letter-spacing: 5.26px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 42px;
+        }
+        img {
+            margin-bottom: 40px;
+        }
+        p {
+            margin-bottom: 95px;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 25.89px;
+        }
+    }
+}
+//what we do top border
+.what-we-do::before, .what-we-do::after {
+    @include topBorder(#3c3c3c); 
+}
+.what-we-do::before {
+    left: 0;
+}
+.what-we-do::after {
+    right: 0;
+}
+//our works
+.our-works {
+    [class*="img-"] {
+        height: 237px;
+        background-size: cover;
+        background-position: center;
+    }
+    .row {
+        margin-top: 10px;
+        .img-1 {
+            background-image: url("../images/layer-5-copy.png");
+        }
+        .img-2 {
+            background-image: url("../images/layer-5-copy-3.png");
+        }
+        .img-3 {
+            background-image: url("../images/layer-5-copy-2.png");
+        }
+
+        .img-4 {
+            background-image: url("../images/layer-5-copy-4.png");
+        }
+        .img-5 {
+            background-image: url("../images/layer-5-copy-123.png");
+        }
+        .img-6 {
+            background-image: url("../images/layer-5-copy-321.png");
+        }
+    }
+}
+//contact us
+.contact-us {
+    color: #3c3c3c;
+    @include borders(#3c3c3c);
+    text-align: center;
+    max-width: 899px;
+    h1 {    
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 4.76px;
+        transform: translateY(-18px);
+        margin-bottom: 40px;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 25.89px;
+        margin-bottom: 42px;
+    }
+    button {
+        letter-spacing: 2.54px;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 16px;
+        color: #ffffff;
+        // style of container button
+        width: 395px;
+        height: 58px;
+        border: 2px solid #3c3c3c;
+        background-color: #3c3c3c;
+        margin-bottom: 50px;
+    }
+}
+//contact us top border
+.contact-us::before, .contact-us::after {
+    @include topBorder(#3c3c3c);
+}
+.contact-us::before {
+    left: 0;
+}
+.contact-us::after {
+    right: 0;
+}
+//footer
+footer {
+    text-align: center;
+    margin-bottom: 60px;
+    span {
+    color: #3c3c3c;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 36px;
+    }
+}
