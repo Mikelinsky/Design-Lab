@@ -223,9 +223,6 @@ section {
   .our-works .row .img-6 {
     background-image: url("../images/layer-5-copy-321.png"); }
 
-[class*="col-"] {
-  padding: 12px; }
-
 .col-small {
   flex: 1;
   transition-timing-function: ease-in-out; }
