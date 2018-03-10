@@ -1,303 +1,65 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
-* {
-  box-sizing: border-box;
-  font-family: "Lato"; }
+/*
+Error: Undefined mixin 'media-breakpoint-up'.
+        on line 335 of sass/style.scss, in `media-breakpoint-up'
+        from line 335 of sass/style.scss
 
-.section-container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1920px; }
+330: //media queries
+331: 
+332: /*@include media-breakpoint-up(xs) { ... }
+333: @include media-breakpoint-up(sm) { ... }
+334: @include media-breakpoint-up(md) { ... }*\/
+335: @include media-breakpoint-up(lg) {
+336:     .row {
+337:         h4 {
+338:             letter-spacing: 7px;  
+339:         }
+340:     }
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; }
-
-header {
-  background-image: url("../images/layer-8.jpg");
-  width: 100%;
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  text-align: center;
-  position: relative;
-  padding-top: calc(50vh - 127px); }
-  header .logo-img {
-    width: 65px;
-    height: 69px;
-    position: absolute;
-    top: 20vh;
-    right: calc(50% - 32px); }
-  header .scroll-img {
-    width: 23px;
-    height: 37px;
-    position: absolute;
-    bottom: 60px;
-    right: calc(50% - 11px); }
-  header h1 {
-    margin-bottom: 40px;
-    font-size: 54px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 8.62px; }
-  header p {
-    font-weight: 400;
-    line-height: 29px;
-    text-transform: uppercase;
-    letter-spacing: 0.9px; }
-
-.about-us {
-  max-width: 902px;
-  border-right: 2px solid;
-  border-left: 2px solid;
-  border-bottom: 2px solid;
-  position: relative;
-  border-color: #3c3c3c;
-  text-align: center;
-  color: #3c3c3c;
-  margin-top: 160px;
-  margin-bottom: 160px;
-  padding-bottom: 40px; }
-  .about-us h1 {
-    letter-spacing: 8.95px;
-    font-size: 34px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 0 auto 45px auto;
-    transform: translateY(-20px); }
-  .about-us p {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 24px; }
-
-.about-us::after, .about-us::before {
-  content: " ";
-  width: 23%;
-  position: absolute;
-  top: 0;
-  border-top: 2px solid #3c3c3c; }
-
-.about-us::after {
-  left: 0; }
-
-.about-us::before {
-  right: 0; }
-
-.services {
-  max-width: 1920px;
-  background-image: url("../images/layer-4.png");
-  padding: 110px 0 96px 0;
-  background-size: cover;
-  background-position: center; }
-  .services .services-container::after, .services .services-container::before {
-    content: " ";
-    width: 23%;
-    position: absolute;
-    top: 0;
-    border-top: 2px solid #ffffff; }
-  .services .services-container::after {
-    left: 0; }
-  .services .services-container::before {
-    right: 0; }
-  .services .services-container {
-    text-align: center;
-    color: #ffffff;
-    max-width: 899px;
-    border-right: 2px solid;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    position: relative;
-    border-color: #ffffff; }
-    .services .services-container h1 {
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 25.89px;
-      letter-spacing: 8.95px;
-      font-size: 34px;
-      text-transform: uppercase;
-      transform: translateY(-12px);
-      margin-bottom: 3rem; }
-    .services .services-container p {
-      margin-bottom: 3rem; }
-
-section {
-  margin-top: 119px;
-  margin-bottom: 114px; }
-  section .what-we-do {
-    border-right: 2px solid;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
-    position: relative;
-    border-color: #3c3c3c;
-    max-width: 902px;
-    text-align: center;
-    color: #3c3c3c; }
-    section .what-we-do h1 {
-      text-transform: uppercase;
-      font-size: 34px;
-      font-weight: 700;
-      letter-spacing: 8.95px;
-      transform: translateY(-20px);
-      margin-bottom: 112px; }
-    section .what-we-do h4 {
-      font-size: 20px;
-      letter-spacing: 5.26px;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: 42px; }
-    section .what-we-do img {
-      margin-bottom: 40px; }
-    section .what-we-do p {
-      margin-bottom: 95px;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 25.89px; }
-
-.what-we-do::before, .what-we-do::after {
-  content: " ";
-  width: 23%;
-  position: absolute;
-  top: 0;
-  border-top: 2px solid #3c3c3c; }
-
-.what-we-do::before {
-  left: 0; }
-
-.what-we-do::after {
-  right: 0; }
-
-.our-works [class*="img-"] {
-  height: 237px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  cursor: pointer;
-  transition-duration: 1.5s; }
-.our-works [class*="img-"] div {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.2); }
-  .our-works [class*="img-"] div h4 {
-    display: none;
-    color: #ffffff;
-    font-size: 34px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 8.95px;
-    position: absolute;
-    bottom: 10%;
-    left: 8%; }
-.our-works [class*="img-"]:hover {
-  -ms-flex-positive: 3;
-      flex-grow: 3; }
-.our-works [class*="img-"]:hover div {
-  display: block; }
-.our-works [class*="img-"]:hover div h4 {
-  display: block; }
-.our-works .row {
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 1%; }
-  .our-works .row h4 {
-    color: #ffffff;
-    font-size: 34px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 8.95px;
-    position: absolute;
-    bottom: 10%;
-    left: 8%; }
-  .our-works .row .img-1 {
-    background-image: url("../images/layer-5-copy.png"); }
-  .our-works .row .img-2 {
-    background-image: url("../images/layer-5-copy-3.png"); }
-  .our-works .row .img-3 {
-    background-image: url("../images/layer-5-copy-2.png"); }
-  .our-works .row .img-4 {
-    background-image: url("../images/layer-5-copy-4.png"); }
-  .our-works .row .img-5 {
-    background-image: url("../images/layer-5-copy-123.png"); }
-  .our-works .row .img-6 {
-    background-image: url("../images/layer-5-copy-321.png"); }
-
-.col-small {
-  -ms-flex: 1;
-      flex: 1;
-  transition-timing-function: ease-in-out; }
-
-.col-big {
-  margin: auto 1%;
-  -ms-flex: 2;
-      flex: 2; }
-
-.contact-us {
-  color: #3c3c3c;
-  border-right: 2px solid;
-  border-left: 2px solid;
-  border-bottom: 2px solid;
-  position: relative;
-  border-color: #3c3c3c;
-  text-align: center;
-  max-width: 899px; }
-  .contact-us h1 {
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 4.76px;
-    transform: translateY(-18px);
-    margin-bottom: 40px; }
-  .contact-us p {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 25.89px;
-    margin-bottom: 42px; }
-  .contact-us button {
-    letter-spacing: 2.54px;
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: 16px;
-    color: #ffffff;
-    width: 395px;
-    height: 58px;
-    border: 2px solid #3c3c3c;
-    background-color: #3c3c3c;
-    margin-bottom: 50px;
-    cursor: pointer;
-    transition-duration: .5s; }
-  .contact-us button:hover {
-    transform: scale(1.1);
-    background-color: #5c5c5c;
-    border: 2px solid #5c5c5c; }
-
-.contact-us::before, .contact-us::after {
-  content: " ";
-  width: 23%;
-  position: absolute;
-  top: 0;
-  border-top: 2px solid #3c3c3c; }
-
-.contact-us::before {
-  left: 0; }
-
-.contact-us::after {
-  right: 0; }
-
-footer {
-  text-align: center;
-  margin-bottom: 60px; }
-  footer span {
-    color: #3c3c3c;
-    font-size: 14px;
-    font-weight: 400;
-    margin-left: 36px; }
-
-/*@include media-breakpoint-up(xs) { ... }
-@include media-breakpoint-up(sm) { ... }
-@include media-breakpoint-up(md) { ... }*/
-
-/*# sourceMappingURL=style.prefixed.css.map */
+Backtrace:
+sass/style.scss:335:in `media-breakpoint-up'
+sass/style.scss:335
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:98:in `block in with_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:98:in `with_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:162:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:161:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:320:in `block in watch'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'media-breakpoint-up'.\A         on line 335 of sass/style.scss, in `media-breakpoint-up'\A         from line 335 of sass/style.scss\A \A 330: //media queries\A 331: \A 332: /*@include media-breakpoint-up(xs) { ... }\A 333: @include media-breakpoint-up(sm) { ... }\A 334: @include media-breakpoint-up(md) { ... }*/\A 335: @include media-breakpoint-up(lg) {\A 336:     .row {\A 337:         h4 {\A 338:             letter-spacing: 7px;  \A 339:         }\A 340:     }"; }

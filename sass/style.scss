@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url("../node_modules/bootstrap/scss/variables");
+@import url("../node_modules/bootstrap/scss/mixins");
+@import url("../node_modules/bootstrap/scss/functions");
+
 * {
     box-sizing: border-box;
     font-family: "Lato";
@@ -205,17 +209,6 @@ section {
         bottom: 0;
         left: 0;
         background-color: rgba(0, 0, 0, 0.2);
-        h4 {
-            display: none;
-            color: #ffffff;
-            font-size: 34px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 8.95px;
-            position: absolute;
-            bottom: 10%;
-            left: 8%;
-        }
     }
     [class*="img-"]:hover {
         flex-grow: 3;
@@ -229,6 +222,8 @@ section {
     .row {
         display: flex;
         margin-top: 1%;
+        margin-right: 0;
+        margin-left: 0;
         h4 {
             color: #ffffff;
             font-size: 34px;
@@ -238,6 +233,7 @@ section {
             position: absolute;
             bottom: 10%;
             left: 8%;
+            z-index: 2;
         }
         .img-1 {
             background-image: url("../images/layer-5-copy.png");
@@ -260,7 +256,7 @@ section {
         }
     }
 }
-//grid for 'our works' & clearfix
+//grid for 'our works'
 .col-small {
     flex: 1;
     transition-timing-function: ease-in-out;
@@ -336,6 +332,10 @@ footer {
 /*@include media-breakpoint-up(xs) { ... }
 @include media-breakpoint-up(sm) { ... }
 @include media-breakpoint-up(md) { ... }*/
-//@include media-breakpoint-up(lg) {
-
-//}
+@include media-breakpoint-up(lg) {
+    .row {
+        h4 {
+            letter-spacing: 7px;  
+        }
+    }
+}
