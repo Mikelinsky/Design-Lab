@@ -194,8 +194,40 @@ section {
         background-size: cover;
         background-position: center;
         position: relative;
+        cursor: pointer;
+        transition-duration: 1.5s;
+    }
+    [class*="img-"] div {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        h4 {
+            display: none;
+            color: #ffffff;
+            font-size: 34px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 8.95px;
+            position: absolute;
+            bottom: 10%;
+            left: 8%;
+        }
+    }
+    [class*="img-"]:hover {
+        flex-grow: 3;
+    }
+    [class*="img-"]:hover div {
+        display: block;
+    }
+    [class*="img-"]:hover div h4 {
+        display: block;
     }
     .row {
+        display: flex;
         margin-top: 1%;
         h4 {
             color: #ffffff;
@@ -229,21 +261,16 @@ section {
     }
 }
 //grid for 'our works' & clearfix
-.row:before,
-.row:after {
-	content:"";
-	display: table ;
-	clear: both;
-}
- [class*="col-"] {
-	float: left;
-	min-height: 1px;
+[class*="col-"] {
     padding: 12px;
 }
-.col-small {width: 30%;}
+.col-small {
+    flex: 1;
+    transition-timing-function: ease-in-out;
+}
 .col-big {
-    width: 38%;
     margin: auto 1%;
+    flex: 2;
 }
 //contact us
 .contact-us {
@@ -271,12 +298,18 @@ section {
         font-weight: 400;
         font-size: 16px;
         color: #ffffff;
-        // style of container button
         width: 395px;
         height: 58px;
         border: 2px solid #3c3c3c;
         background-color: #3c3c3c;
         margin-bottom: 50px;
+        cursor: pointer;
+        transition-duration: .5s;
+    }
+    button:hover {
+        transform: scale(1.1);
+        background-color: #5c5c5c;
+        border: 2px solid #5c5c5c;
     }
 }
 //contact us top border
@@ -300,3 +333,12 @@ footer {
     margin-left: 36px;
     }
 }
+
+//media queries
+
+/*@include media-breakpoint-up(xs) { ... }
+@include media-breakpoint-up(sm) { ... }
+@include media-breakpoint-up(md) { ... }*/
+//@include media-breakpoint-up(lg) {
+
+//}
