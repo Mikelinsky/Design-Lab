@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
-@import url("node_modules/bootstrap/scss/variables");
-@import url("node_modules/bootstrap/scss/mixins");
-@import url("node_modules/bootstrap/scss/functions");
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 * {
     box-sizing: border-box;
@@ -329,13 +327,196 @@ footer {
 
 //media queries
 
-/*@include media-breakpoint-up(xs) { ... }
-@include media-breakpoint-up(sm) { ... }
-@include media-breakpoint-up(md) { ... }*/
-@include media-breakpoint-up(lg) {
-    .row {
-        h4 {
-            letter-spacing: 7px;  
+@include media-breakpoint-only(xs) {
+    section {
+        .about-us {
+            h1 {
+                letter-spacing: 7px;
+                font-size: 20px; 
+                margin-bottom: 15px;
+                transform: translateY(-12px);
+            }
+        }
+    }
+    .services {
+        .services-container {
+            h1 {
+                letter-spacing: 7px;
+                font-size: 20px; 
+                margin-bottom: 15px;
+            }
+        }
+    }
+    section {
+        .what-we-do {
+            h1 {
+                letter-spacing: 7px;
+                font-size: 20px; 
+                margin-bottom: 15px;
+                transform: translateY(-12px);
+            }
+        }
+    }
+    section {
+        .contact-us {
+            h1 {
+                letter-spacing: 7px;
+                font-size: 20px; 
+                margin-bottom: 15px;
+                transform: translateY(-12px);
+            }
+        }
+    }
+
+    .our-works {
+        .row {
+            flex-direction: column;
+            margin: 0;
+            .col-big {
+                margin: 3px 0;
+            }
+            .col-small {
+                margin: 3px 0;
+            }
+            [class*="img-"] {
+            height: 180px;
+            width: 100%; 
+            }
+        }
+    }
+    .container {
+        width: 85%;
+    }
+    .section-container {
+        .our-works {
+            .row {
+                h4 {
+                    letter-spacing: 6px;  
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    section {  
+        .contact-us {
+            button {
+                width: 70%;
+                
+            }
         }
     }
 }
+@include media-breakpoint-only(sm) {
+    section {
+        .about-us {
+            h1 {
+                letter-spacing: 7px;
+                font-size: 25px; 
+                margin-bottom: 15px;
+                transform: translateY(-15px);
+            }
+        }
+    }
+    .services {
+        .services-container {
+            h1 {
+                letter-spacing: 7px;
+                font-size: 25px; 
+                margin-bottom: 15px;
+            }
+        }
+    }
+    section {
+        .what-we-do {
+            h1 {
+                letter-spacing: 7px;
+                font-size: 25px; 
+                margin-bottom: 15px;
+                transform: translateY(-15px);
+            }
+        }
+    }
+    section {
+        .contact-us {
+            h1 {
+                letter-spacing: 7px;
+                font-size: 25px; 
+                margin-bottom: 15px;
+                transform: translateY(-15px);
+            }
+        }
+    }
+    .our-works {
+        .row {
+            flex-direction: column;
+            margin: 0;
+            .col-big {
+                margin: 3px 0;
+            }
+            .col-small {
+                margin: 3px 0;
+            }
+            [class*="img-"] {
+            height: 180px;
+            width: 100%; 
+            }
+        }
+    }
+    .container {
+        width: 85%;
+    }
+    .section-container {
+        .our-works {
+            .row {
+                h4 {
+                    letter-spacing: 6px;  
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-only(md) {
+    .our-works [class*="img-"] {
+        height: 180px;
+    }
+    .container {
+        width: 85%;
+    }
+    .section-container {
+        .our-works {
+                .row {
+                    h4 {
+                        letter-spacing: 3px;  
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+@include media-breakpoint-only(lg) {
+    .our-works {
+        .row {
+            h4 { 
+                font-size: 18px;
+                letter-spacing: 5px;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1199.99px) and (max-width: 1774px) {
+    .our-works {
+        .row {
+            flex-direction: row;
+            h4 {
+                letter-spacing: 7px;  
+                font-size: 23px;
+            }
+        }
+    }
+}
+
