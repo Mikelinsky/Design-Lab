@@ -405,7 +405,18 @@ footer {
             }
         }
     }
+    footer {
+        flex-direction: column;
+        img {
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+        span {
+            display: block;
+        }
+    }
 }
+
 @include media-breakpoint-only(sm) {
     section {
         .about-us {

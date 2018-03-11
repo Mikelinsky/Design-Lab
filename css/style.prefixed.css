@@ -7298,7 +7298,16 @@ footer {
     font-size: 25px; }
 
   section .contact-us button {
-    width: 70%; } }
+    width: 70%; }
+
+  footer {
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    footer img {
+      display: block;
+      margin: 0 auto 10px auto; }
+    footer span {
+      display: block; } }
 @media (min-width: 576px) and (max-width: 767.98px) {
   section .about-us h1 {
     letter-spacing: 7px;
@@ -7362,5 +7371,3 @@ footer {
     .our-works .row h4 {
       letter-spacing: 7px;
       font-size: 23px; } }
-
-/*# sourceMappingURL=style.prefixed.css.map */
