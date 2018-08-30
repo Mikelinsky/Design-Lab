@@ -327,8 +327,22 @@ footer {
 //media queries
 
 @include media-breakpoint-only(xs) {
+    header {
+        .logo-img {
+            top: 6vh;
+        }
+        h1 {
+            font-size: 25px;
+        }
+        p {
+            font-size: 13px;
+            br {
+                display: none;
+            }
+        }
+    }
     section {
-        .about-us {
+        .about-us { 
             h1 {
                 letter-spacing: 7px;
                 font-size: 20px; 
@@ -417,6 +431,19 @@ footer {
 }
 
 @include media-breakpoint-only(sm) {
+    header {
+        .logo-img {
+            top: 7vh;
+        }
+        h1 {
+            font-size: 35px;
+        }
+        p {
+            br {
+                display: none;
+            }
+        }
+    }
     section {
         .about-us {
             h1 {

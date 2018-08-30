@@ -7254,6 +7254,15 @@ footer {
     margin-left: 36px; }
 
 @media (max-width: 575.98px) {
+  header .logo-img {
+    top: 6vh; }
+  header h1 {
+    font-size: 25px; }
+  header p {
+    font-size: 13px; }
+    header p br {
+      display: none; }
+
   section .about-us h1 {
     letter-spacing: 7px;
     font-size: 20px;
@@ -7308,6 +7317,13 @@ footer {
     footer span {
       display: block; } }
 @media (min-width: 576px) and (max-width: 767.98px) {
+  header .logo-img {
+    top: 7vh; }
+  header h1 {
+    font-size: 35px; }
+  header p br {
+    display: none; }
+
   section .about-us h1 {
     letter-spacing: 7px;
     font-size: 25px;
